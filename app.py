@@ -7,4 +7,4 @@ This is a temporary script file.
 
 import streamlit as st
 st.title("konnnnitiha")
-st.write("")
+st.write("よろしく")
