@@ -6,9 +6,6 @@ This is a temporary script file.
 """
 
 import streamlit as st
-text = st.text_input('食材を追加してください')
-d = st.date_input(
-    "賞味期限はいつですか？",)
 
 st.title("冷蔵庫の賞味期限")
 
