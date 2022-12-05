@@ -11,14 +11,32 @@ st.title("冷蔵庫の賞味期限")
 
 left_column,right_column = st.columns(2)
 
+term1 = st.date_input('1つ目の食材の賞味期限はいつですか？',)
+left_column.write(term1)
+
+term2 = st.date_input('2つ目の食材の賞味期限はいつですか？',)
+left_column.write(term2)
+
+term3 = st.date_input('3つ目の食材の賞味期限はいつですか？',)
+left_column.write(term3)
+
+term4 = st.date_input('4つ目の食材の賞味期限はいつですか？',)
+left_column.write(term4)
+
+
 food1 = st.date_input('1つ目の食材の賞味期限はいつですか？',)
 left_column.write(food1)
 
 food2 = st.date_input('2つ目の食材の賞味期限はいつですか？',)
 left_column.write(food2)
 
+food3 = st.date_input('3つ目の食材の賞味期限はいつですか？',)
+left_column.write(food3)
+
+food4 = st.date_input('4つ目の食材の賞味期限はいつですか？',)
+left_column.write(food4)
 
 import pandas as pd
 st.table(pd.DataFrame({
-    '食材': [1, 2, 3, 4],
-    '賞味期限': [food1, food2, 30, 40]}))
+    '食材': [food1, food2, food3, food4],
+    '賞味期限': [term1, term2, term3, term4]}))
