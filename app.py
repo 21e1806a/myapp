@@ -25,7 +25,7 @@ food4 = st.text_input('食材は何ですか？')
 term4 = st.date_input('の賞味期限はいつですか？',)
 
 import pandas as pd
-st.table(pd.DataFrame({
-    '食材':[food1, food2, food3, food4],
-    '賞味期限': [term1, term2, term3, term4
-             ]}))
+df=pd.DataFrame({
+    '食材':pd.Series([food1, food2, food3, food4], index = [ 1, 2, 3, 4 ] ),
+    '賞味期限': pd.Series([term1, term2, term3, term4], index = [ 1, 2, 3, 4 ] )
+    })
