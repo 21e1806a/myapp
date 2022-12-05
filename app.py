@@ -9,26 +9,11 @@ import streamlit as st
 
 st.title("冷蔵庫の賞味期限")
 
-food1 = st.text_input('一つ目の食材は何ですか？')
-term1 = st.date_input('一つ目の賞味期限はいつですか？',)
+left_column,right_column = st.columns(2)
 
-food2 = st.text_input('二つ目の食材は何ですか？')
-term2 = st.date_input("二つ目の賞味期限はいつですか？",)
-
-food3 = st.text_input('三つ目の食材は何ですか？')
-term3 = st.date_input('三つ目の賞味期限はいつですか？',)
-
+food1 = st.date_input('1つ目の食材の賞味期限はいつですか？',)
+left_column.write(food1)
 import pandas as pd
-list1=[food1,food2,food3]
-pd.DataFrame(data=list1)
-
-import pandas as pd
-df=pd.DataFrame({
-    '食材': pd.Series([food1, food2, food3], index = [1, 2, 3]),
-    '賞味期限': pd.Series([term1, term2, term3], index = [1, 2, 3])
-    }) 
-
-df.sort_values( by = '賞味期限', ascending = True, inplace = True )
-print(df)
-
-
+st.table(pd.DataFrame({
+    '食材': [food1, 2, 3, 4],
+    '賞味期限': [10, 20, 30, 40]}))
