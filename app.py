@@ -26,6 +26,10 @@ lst1 = cache_lst1()
 input = st.text_input('食材は何ですか？')
 if input:
     lst1.append(input)
+    
+food1 = st.date_input('1つ目の食材の賞味期限はいつですか？',)
+left_column.write(food1)    
+
 if st.checkbox('delete1'):
     delete = st.selectbox('食べたらリストから削除しましょう', options=lst1)
     if st.button('Delete1'):
