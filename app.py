@@ -12,8 +12,10 @@ st.title("冷蔵庫の賞味期限")
 import pandas as pd
 st.table(pd.DataFrame({
     '食材': [1, 2, 3, 4],
-    '賞味期限': [10, 20, 30, 40]
-    
+    '賞味期限': [10, 20, 30, 40]}))
+
+
+
 left_column,right_column = st.columns(2)  
 
 
@@ -36,5 +38,3 @@ if st.checkbox('delete1'):
         st.success(f'Delete1 : {delete}')
         
 st.table(lst1)
-
-
