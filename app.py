@@ -14,9 +14,9 @@ st.title("冷蔵庫の賞味期限")
 
 left_column,right_column = st.columns(2)  
 
-def main():
-    food1 = st.date_input('1の食材の賞味期限はいつですか？',)
-    left_column.write(food1)   
+
+food1 = st.date_input('1の食材の賞味期限はいつですか？',)
+left_column.write(food1)   
     
 @st.cache(allow_output_mutation=True)
 def cache_lst1():
